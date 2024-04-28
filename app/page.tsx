@@ -1,14 +1,27 @@
+import UserInformation from "@/components/UserInformation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="grid">
 
     <h1>
-      Linked in clone
+      <section>
+        {/*user information*/}
+        <UserInformation/>
+      </section>
+
+      <section>
+        {/*postform*/}
+        {/*postfeed*/}
+      </section>
+
+      <section>
+        {/*widget*/}
+      </section>
     </h1>
     
-    </main>
+    </div>
   );
 }
