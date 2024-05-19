@@ -57,7 +57,7 @@ alt="logo"
         {/*sign in button if user not signed in */}
 
         <SignedOut>
-          <Button asChild>
+          <Button asChild variant="secondary">
             <SignInButton/>
           </Button>
         </SignedOut>
