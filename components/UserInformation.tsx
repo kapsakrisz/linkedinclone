@@ -10,7 +10,7 @@ const firstName =user?.firstName;
 const lastName= user?.lastName;
 const imageUrl = user?.imageUrl;
     return <div className="flex flex-col justify-center items-center bg-white mr-6 rounded-lg border py-4">
-        <Avatar>
+        <Avatar className="h-16 w-16 mb-5">
 {user?.id?(
 
     <AvatarImage src={imageUrl }/>
