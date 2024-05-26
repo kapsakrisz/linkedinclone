@@ -22,6 +22,22 @@ const {user}=useUser();
 {user?.lastName?.charAt(0)}
     </AvatarFallback>
   </Avatar>
+  <input type="text"
+            name="postInput"
+            placeholder="Start writing a post..."
+            className="flex-1 outline-none rounded-full py-3 px-4 border"/>
+            <input
+            
+            type="file"
+            name="image"
+            accept="image/*"
+            hidden
+            
+          />
+          <button type="submit" hidden>
+            post
+
+          </button>
   
   </div>
 
