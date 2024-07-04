@@ -3,7 +3,7 @@
 import { useUser } from "@clerk/nextjs"
 import {  AvatarFallback, AvatarImage } from "@radix-ui/react-avatar"
 import { Avatar } from "./avatar";
-import { ImageIcon } from "lucide-react";
+import { ImageIcon, XIcon } from "lucide-react";
 import { Button } from "./button";
 import { useRef, useState } from "react";
 
@@ -56,14 +56,36 @@ const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
           </button>
   
   </div>
+  {preview && (
+    <div className="mt-3"
+    >
+      <img src={preview} alt="preview" className="w-full object-cover" />
+    </div>
+  )}
   <div>
     <Button type="button" onClick={() =>fileInputRef.current?.click()}>
 <ImageIcon className="mr-2" size={16} color="currentColor"/>
-Add
+{preview ? "change":"Add"} image
+
     </Button>
+
+
+    {preview && (
+            <Button
+              type="button"
+              onClick={() => setPreview(null)}
+              variant="outline"
+              className="ml-2"
+            >
+              <XIcon className="mr-2" size={16} color="currentColor" />
+              Remove image
+            </Button>
+          )}
   </div>
 
 </form>
+
+<hr className="mt-2 border-gray-300" />
 
     </div>
   )
